@@ -12,6 +12,10 @@
         "config": {
           "distDir": "staticfiles_build"
         }
+      },
+      {
+        "src": "bloodbank/asgi.py",
+        "use": "@vercel/python"
       }
     ],
     "routes": [
@@ -22,6 +26,14 @@
       {
         "src": "/(.*)",
         "dest": "bloodbank/wsgi.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "bloodbank/asgi.py"
       }
     ]
+     
+    
   }
+  
+ 
